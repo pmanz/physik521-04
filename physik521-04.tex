@@ -54,7 +54,7 @@ $P_N$ dort ein:
         Die Summe im Exponenten kann man in ein Produkt von
         Exponentialfunktionen schreiben.
     }
-    &= \frac{N!}N \prod_{i=1}^N \underbrace{\int 
+    &= \frac{N!}N \prod_{i=1}^N \underbrace{\int
         \exp{\ii k \frac 1N \del{x_i - \mw{x}}}
     p(x_i) \dif x_i}_{\chi\del{\frac kN}} \\
     \intertext{%
@@ -66,6 +66,18 @@ $P_N$ dort ein:
 Dies stimmt bis auf unseren Vorfaktor auch mit dem Ergebnis überein, das wir
 erhalten sollten.
 
+\subsection{Grenzfall $N\to\infty$}
+
+Wir rechnen mit dem gegebenen Ergebnis weiter:
+\begin{align*}
+    X_N(k) &= \del{\chi\del{\frac{k}{N}}}^N \\
+           &= \exp{N\log\del{\chi\del{\frac{k}{N}}}}
+    \intertext{Taylrn von $\log\del{\chi}$ um $\frac{k}{N} = 0$:}
+    \log\del{\chi\del{\frac{k}{N}}} &= \log\del{\int\dif y\, \exp{\ii
+    \frac{k}{N}\del{y-\mw{y}}}P_N(y)} \\
+    &= \log\del{\int\dif y\, P_N(y)} + \frac{P_N(y)}{\del{\int\dif y
+    P_N(y)}}\frac{k}{N} + \dots
+\end{align*}
 \end{document}
 
 % vim: spell spelllang=de tw=79
