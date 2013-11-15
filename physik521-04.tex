@@ -17,6 +17,38 @@
 \maketitle
 
 \section{Thermodynamische Relationen}
+Es gilt zu zeigen:
+\[\frac{c_p}{c_V}=\frac{\kappa_T}{\kappa_S} \]
+Setzen zunächst die Definitionen ein:
+\begin{align*}
+\frac{c_p}{c_V}=\frac{T \del{\dpd ST}_{p}}{T \del{\dpd ST}_V}= \frac{ \del{\dpd ST}_{p}}{ \del{\dpd ST}_V}\\
+\end{align*}
+
+In der Ableitung im Zähler wird $p=p\del{S,T}$ festgehalten, es gilt deshalb:
+\begin{align*}
+\dif p = \del{\dpd pT}_S \dif T + \del{\dpd pS}_T \dif S = 0 \\
+\implies \del{\dpd ST}_p = -\frac{\del{\dpd pT}_S}{\del{\dpd pS}_T}
+\end{align*}
+
+Im Nenner wird $V=V\del{S,T}$ festgehalten, also:
+\begin{align*}
+\dif V = \del{\dpd VS}_T \dif S + \del{\dpd VT}_S \dif T = 0 \\
+\implies \del{\dpd ST}_V = -\frac{\del{\dpd VT}_S}{\del{\dpd VS}_T} \\
+\end{align*}
+
+Wir erhalten als Zwischenergebnis:
+\begin{align*}
+\frac{c_p}{c_V}=\frac{\del{\dpd pT}_S}{\del{\dpd VT}_S} \frac{\del{\dpd VS}_T}{\del{\dpd pS}_T}
+\end{align*}
+
+Nach der Kettenregel gilt:
+\begin{align*}
+\del{\dpd pV}_S \del{\dpd VT}_S &= \del{\dpd pT}_S \\
+\implies \frac{\del{\dpd pT}_S}{\del{\dpd VT}_S} &= \del{\dpd pV}_S =\frac{1}{\kappa_S} \\
+\del{\dpd Vp}_T \del{\dpd pS}_T &= \del{\dpd VS}_T \\
+\implies \frac{\del{\dpd VS}_T}{\del{\dpd pS}_T} &= \del{\dpd Vp}_T =\kappa_T \\
+\implies \frac{c_p}{c_V} &= \frac{\kappa_T}{\kappa_S}
+\end{align*}
 
 \section{Zentraler Grenzwertsatz}
 
