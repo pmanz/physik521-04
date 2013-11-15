@@ -48,14 +48,14 @@ Wir nehmen die Definition der charakteristischen Funktion und setzen unser
 $P_N$ dort ein:
 \begin{align*}
     X_N(k)
-    &= \int \exp{\ii k \frac 1N \sum_{i=1}^N (x_i - \langle x \rangle)}
+    &= \int \exp{\ii k \frac 1N \sum_{i=1}^N \del{x_i - \mw{x}}}
     \frac{N!}N \prod_{i=1}^N p(x_i) \dif x_i \\
     \intertext{%
         Die Summe im Exponenten kann man in ein Produkt von
         Exponentialfunktionen schreiben.
     }
     &= \frac{N!}N \prod_{i=1}^N \underbrace{\int 
-        \exp{\ii k \frac 1N (x_i - \langle x \rangle)}
+        \exp{\ii k \frac 1N \del{x_i - \mw{x}}}
     p(x_i) \dif x_i}_{\chi\del{\frac kN}} \\
     \intertext{%
         Produkte gleicher Faktoren sind Potenzen.
